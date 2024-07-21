@@ -1,0 +1,19 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+n = int(input())
+l = list(map(int, input().split()))
+count = 0
+while all(a % 2 ==0 for a in l):
+    l = [a // 2 for a in l]
+    count += 1
+print(count)
