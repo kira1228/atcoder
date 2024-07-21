@@ -11,13 +11,27 @@
 11
 12
 13
-N = int(input())
-A3 = N // 3
-A5 = N // 5
-A7 = N // 7
-A15 = N // 15
-A35 = N // 35
-A21 = N // 21
-A105 = N // 105
-nums = A3 + A5 + A7 - A15 - A35 - A21 + A105
-print(nums)
+14
+15
+16
+17
+18
+19
+20
+# aのb乗をmで割ったあまりを返す関数
+def Power(a, b, m):
+    p = a
+    Answer = 1
+    for i in range(30):
+        wari = 2 ** i
+        if (b // wari) % 2 == 1:
+            Answer = (Answer * p) % m
+        p = (p * p) % m
+    return Answer 
+# a÷bを m で割った余りを返す関数
+def Division(a, b, m):
+    return (a * Power(b, m-2, m)) % m
+H, W = map(int, input().split())
+m = 1000000007
+a = 1
+ 

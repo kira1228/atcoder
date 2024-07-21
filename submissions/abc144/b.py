@@ -11,14 +11,22 @@
 11
 12
 13
+14
+15
+16
+17
+18
+19
 n = int(input())
-s = set()
-for i in range(1, 10):
-    for j in range(1, 10):
-        k = i*j
-        s.add(k)
-if n in s:
-    print('Yes')
-else:
-    print('No')
-    
+l = []
+for i in range(n):
+    A, B, C, D = map(int , input().split())
+    l.append([A, B, C, D])
+s = 0
+for x in range(1, 101):
+    for y in range(1, 101):
+        for A, B, C, D in l:
+            if (A < x - 0.5 < B and C < y - 0.5 < D):
+                s += 1
+                break
+print(s)

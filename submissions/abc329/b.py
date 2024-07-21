@@ -11,14 +11,14 @@
 11
 12
 13
-n = int(input())
-s = set()
-for i in range(1, 10):
-    for j in range(1, 10):
-        k = i*j
-        s.add(k)
-if n in s:
-    print('Yes')
-else:
-    print('No')
-    
+14
+n, s, k = list(map(int, input().split()))
+total = 0
+for i in range(n):
+    p, q = map(int, input().split())
+    total += p*q
+if (total < s):
+    total += k
+    print(total)
+    else:
+    print(total)

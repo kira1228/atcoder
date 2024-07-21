@@ -6,9 +6,19 @@
 6
 7
 8
-a = int(input())
-b = int(input())
-list = [1, 2, 3]
-list.remove(a)
-list.remove(b)
-print(list[0])
+9
+10
+11
+12
+13
+14
+n, s, k = list(map(int, input().split()))
+total = 0
+for i in range(n):
+    p, q = map(int, input().split())
+    total += p*q
+if (total < s):
+    total += k
+    print(total)
+    else:
+    print(total)
