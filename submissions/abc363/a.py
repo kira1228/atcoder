@@ -6,33 +6,10 @@
 6
 7
 8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-#include <iostream>
-#include <algorithm>
-#include <set>
-#include <string>
-#include <vector>
-using namespace std;
-// 全ての順列を生成する関数
-set<string> all_permutations(string str) {
-    set<string> perm_set;
-    sort(str.begin(), str.end());
-    do {
-        perm_set.insert(str);
-    } while (next_permutation(str.begin(), str.end()));
-    return perm_set;
-}
-// 回文チェック関数
-bool is_palindrome(const string& s) {
- 
+R = int(input())
+if R <= 99:
+    print(100-R)
+elif R <= 199:
+    print(200-R)
+elif R<= 299:
+    print(300-R)

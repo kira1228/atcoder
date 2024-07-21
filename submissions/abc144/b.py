@@ -12,21 +12,14 @@
 12
 13
 14
-15
-16
-17
-18
-19
-n = int(input())
-l = []
-for i in range(n):
-    A, B, C, D = map(int , input().split())
-    l.append([A, B, C, D])
-s = 0
-for x in range(1, 101):
-    for y in range(1, 101):
-        for A, B, C, D in l:
-            if (A < x - 0.5 < B and C < y - 0.5 < D):
-                s += 1
-                break
-print(s)
+n, m = map(int, input().split())
+s = str(input())
+t = str(input())
+if (str(t[:n]) == s and str(t[-n:]) == s):
+    print(0)
+elif (str(t[:n]) == s and str(t[-n:]) != s):
+    print(1)
+elif (str(t[:n]) != s and str(t[-n:]) == s):
+    print(2)
+else:
+    print(3)

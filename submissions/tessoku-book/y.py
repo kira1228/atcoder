@@ -13,25 +13,15 @@
 13
 14
 15
-16
-17
-18
-19
-20
-# aのb乗をmで割ったあまりを返す関数
-def Power(a, b, m):
-    p = a
-    Answer = 1
-    for i in range(30):
-        wari = 2 ** i
-        if (b // wari) % 2 == 1:
-            Answer = (Answer * p) % m
-        p = (p * p) % m
-    return Answer 
-# a÷bを m で割った余りを返す関数
-def Division(a, b, m):
-    return (a * Power(b, m-2, m)) % m
-H, W = map(int, input().split())
-m = 1000000007
-a = 1
- 
+def GCD(A, B):
+    while A >= 1 and B >=1:
+        if A >= B:
+            A = A % B
+        else:
+            B = B % A
+    if A >= 1:
+        return A
+    return B
+            A, B = map(int, input().split())
+LCM = int((A*B) // GCD(A, B))
+print(LCM)

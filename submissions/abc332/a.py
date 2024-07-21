@@ -12,13 +12,14 @@
 12
 13
 14
-n, s, k = list(map(int, input().split()))
-total = 0
-for i in range(n):
-    p, q = map(int, input().split())
-    total += p*q
-if (total < s):
-    total += k
-    print(total)
-    else:
-    print(total)
+n, m = map(int, input().split())
+s = str(input())
+t = str(input())
+if (str(t[:n]) == s and str(t[-n:]) == s):
+    print(0)
+elif (str(t[:n]) == s and str(t[-n:]) != s):
+    print(1)
+elif (str(t[:n]) != s and str(t[-n:]) == s):
+    print(2)
+else:
+    print(3)

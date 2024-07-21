@@ -10,10 +10,25 @@
 10
 11
 12
-n = int(input())
-l = list(map(int, input().split()))
-count = 0
-while all(a % 2 ==0 for a in l):
-    l = [a // 2 for a in l]
-    count += 1
-print(count)
+13
+14
+15
+16
+17
+18
+19
+20
+#include <stdio.h>
+int main(void) 
+{
+    int a, b;
+    scanf("%d %d", &a, &b);
+    int c = a * b;
+    if (c % 2 == 0) {
+        printf("Even");
+    }
+    else {
+        printf("Odd");
+    }
+    return 0;
+}

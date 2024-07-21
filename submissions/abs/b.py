@@ -2,6 +2,9 @@
 2
 3
 4
-d = int(input())
-p = d / 100
-print(p)
+5
+6
+n = int(input())
+s = set(map(int, input().split()))
+s.remove(max(s))
+print(max(s))
