@@ -19,16 +19,19 @@
 19
 20
 #include <stdio.h>
-int main(void) 
+int main(void)
 {
-    int a, b;
-    scanf("%d %d", &a, &b);
-    int c = a * b;
-    if (c % 2 == 0) {
-        printf("Even");
+    int a;
+    scanf("%d", &a);
+    int count = 0;
+    for(int i =0; i < 3; i++) {
+        if (a % 10 == 1) {
+            count += 1;
+            a /= 10;
+        }
+        if (a % 10 == 0) {
+            a /= 10;
+        }
     }
-    else {
-        printf("Odd");
-    }
-    return 0;
-}
+    printf("%d", count);
+ 
